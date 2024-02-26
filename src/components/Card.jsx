@@ -7,7 +7,7 @@ export default function Card() {
     <section className="cardsContainer">
       {logements.map((location, index) => (
         <Link
-          to={"/fiche-logement" + location.id}
+          to={"/fiche-logement/" + location.id}
           key={index + "" + location.id}
         >
           <article>
