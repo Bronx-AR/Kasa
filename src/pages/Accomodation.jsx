@@ -40,23 +40,25 @@ export default function Accommodation() {
     return (
       <section className="accommodationContent">
         <Slideshow imagesList={pictures} />
-        <div className="titleLocationHost">
-          <div>
-            <h1>{title}</h1>
-            <p>{location}</p>
+        <div className="titleLocationHostStars">
+          <div className="titleLocation">
+            <div>
+              <h1>{title}</h1>
+              <p>{location}</p>
+            </div>
+            <ul>
+              {tags.map((tag, index) => (
+                <li key={index}>{tag}</li>
+              ))}
+            </ul>
           </div>
-          <div>
-            <p>{host.name}</p>
-            <img src={host.picture} alt={host.name} />
+          <div className="hostStars">
+            <div className="host">
+              <p>{host.name}</p>
+              <img src={host.picture} alt={host.name} />
+            </div>
+            <div>{stars}</div>
           </div>
-        </div>
-        <div className="tagsStars">
-          <ul>
-            {tags.map((tag, index) => (
-              <li key={index}>{tag}</li>
-            ))}
-          </ul>
-          <div>{stars}</div>
         </div>
         <div className="accommodationCollapse">
           <Collapse title="Description" content={description} />
