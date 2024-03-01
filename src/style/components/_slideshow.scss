@@ -3,6 +3,20 @@
     height: 415px;
     width: 100%;
     max-width: 1240px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border-radius: 35px;
+        background: radial-gradient(
+            at center top,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(0, 0, 0, 0.4) 140%
+        );
+        width: 100%;
+        height: 100%;
+    }
     & .imageAccommodation {
         width: 100%;
         height: 415px;
@@ -14,6 +28,7 @@
         display: flex;
         justify-content: space-between;
         top: -260px;
+        z-index: 1;
         & p {
             color: white;
             position: absolute;
