@@ -5,6 +5,7 @@ import Collapse from "../components/Collapse";
 
 export default function About() {
   const location = useLocation();
+
   return (
     <div>
       <Banner location={location} />

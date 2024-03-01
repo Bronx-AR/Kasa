@@ -3,7 +3,7 @@
         font-size: 24px;
         font-weight: 500;
         color: white;
-        background-color: #ff6060;
+        background-color: $primaryColor;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -14,23 +14,24 @@
         cursor: pointer;
     }
     & .collapsible-content {
-        color: #ff6060;
+        color: $primaryColor;
         background-color: #f6f6f6;
         margin: -5px auto 0 auto;
         max-width: 1240px;
         border-radius: 0 0 5px 5px;
-        animation: loadContent 400ms both;
+        animation: loadContent 600ms both;
     }
     & .collapsible-content.open {
         padding: 35px 30px 15px 15px;
     }
 }
+
 .accommodationCollapse {
     .collapse {
         font-size: 18px;
         font-weight: 500;
         color: white;
-        background-color: #ff6060;
+        background-color: $primaryColor;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -41,40 +42,41 @@
         cursor: pointer;
     }
     & .collapsible-content {
-        color: #ff6060;
+        color: $primaryColor;
         background-color: #f6f6f6;
         margin: -5px auto 0 auto;
         border-radius: 0 0 5px 5px;
-        animation: loadContent 600ms both;
+        animation: loadContent 400ms both;
     }
     & .collapsible-content.open {
         padding: 35px 30px 15px 15px;
     }
-    @media screen and (max-width: 800px) {
-        .aboutCollapse {
-            & .collapse {
-                font-size: 13px;
-                padding: 0 10px;
-                border-radius: 7px;
-            }
-            & .collapsible-content {
-                & p {
-                    font-size: 12px;
-                }
-            }
-            & .collapsible-content.open {
-                padding-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .aboutCollapse {
+        & .collapse {
+            font-size: 13px;
+            padding: 0 10px;
+            border-radius: 7px;
+        }
+        & .collapsible-content {
+            & p {
+                font-size: 12px;
             }
         }
-        .accommodationCollapse {
-            & .collapse {
-                font-size: 13px;
-                padding: 0 10px;
-            }
-            & .collapsible-content {
-                & p {
-                    font-size: 12px;
-                }
+        & .collapsible-content.open {
+            padding-top: 20px;
+        }
+    }
+    .accommodationCollapse {
+        & .collapse {
+            font-size: 13px;
+            padding: 0 10px;
+        }
+        & .collapsible-content {
+            & p {
+                font-size: 12px;
             }
         }
     }

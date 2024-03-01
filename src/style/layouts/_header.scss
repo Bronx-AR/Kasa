@@ -13,27 +13,27 @@ nav {
         font-size: 24px;
         & a {
             text-decoration: none;
-            color: #ff6060;
+            color: $primaryColor;
             &.active {
-                border-bottom: 1px solid #ff6060;
+            border-bottom: 1px solid $primaryColor;
             }
         }
     }
-    @media screen and (max-width: 800px) {
-        nav {
-            padding: 20px 0 0 0;
-            & img {
-                min-width: 145px;
-                height: 47px;
-            }
-            & ul {
-                // justify-content: space-between;
-                font-size: 12px;
-                gap: 0;
-                & li {
-                    padding-left: 10px;
-                    white-space: nowrap;
-                }
+}
+@media screen and (max-width: 800px) {
+    nav {
+        padding: 20px 0 0 0;
+        & img {
+            min-width: 145px;
+            height: 47px;
+        }
+        & ul {
+            // justify-content: space-between;
+            font-size: 12px;
+            gap: 0;
+            & li {
+                padding-left: 10px;
+                white-space: nowrap;
             }
         }
     }

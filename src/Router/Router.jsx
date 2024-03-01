@@ -6,6 +6,7 @@ import Error from "../pages/Error";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
 export default function Router() {
   return (
     <BrowserRouter>
@@ -13,7 +14,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
-        <Route path="/fiche-logement" element={<Accomodation />} />
+        <Route path="/fiche-logement/:id" element={<Accomodation />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

@@ -40,21 +40,22 @@
             cursor: pointer;
         }
     }
-    @media screen and (max-width: 800px) {
-        .descriptionAccommodation {
+}
+
+@media screen and (max-width: 800px) {
+    .descriptionAccommodation {
+        height: 255px;
+        & .imageAccommodation {
             height: 255px;
-            & .imageAccommodation {
-                height: 255px;
+        }
+        & div {
+            top: -140px;
+            & p {
+                bottom: -100px;
             }
-            & div {
-                top: -140px;
-                & p {
-                    bottom: -100px;
-                }
-                & img {
-                    width: 24px;
-                    height: 24px;
-                }
+            & img {
+                width: 24px;
+                height: 24px;
             }
         }
     }

@@ -34,6 +34,7 @@ export default function Slideshow({ imagesList }) {
     </div>
   );
 }
+
 Slideshow.propTypes = {
   imagesList: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

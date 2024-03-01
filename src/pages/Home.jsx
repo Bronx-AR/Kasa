@@ -6,12 +6,13 @@ import logements from "../data/logements.json";
 
 export default function Home() {
   const location = useLocation();
+
   return (
     <div>
       <Banner location={location} />
       <section className="cardsContainer">
         {logements.map((location, index) => (
-          <Card location={location} index={index} />
+          <Card location={location} key={index} />
         ))}
       </section>
     </div>

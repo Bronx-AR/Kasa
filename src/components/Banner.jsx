@@ -25,6 +25,7 @@ export default function Banner({ location }) {
     </section>
   );
 }
+
 Banner.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
