@@ -52,6 +52,25 @@
     }
 }
 
+.arrow {
+    background-color: #ff6060;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 300ms ease-in-out;
+}
+
+.arrow_down {
+    transform: rotate(-180deg);
+    transition: transform 300ms ease-in-out;
+}
+
+.arrow_up {
+    transform: rotate(180deg);
+    transition: transform 300ms ease-in-out;
+}
+
 @media screen and (max-width: 800px) {
     .aboutCollapse {
         & .collapse {

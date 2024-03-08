@@ -5,6 +5,9 @@ import arrow_down from "../assets/arrow_down.png";
 export default function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
+  const handleComponentOpening = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleToggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -18,6 +21,8 @@ export default function Collapse({ title, content }) {
       >
         <p>{title}</p>
         <img
+          onClick={handleComponentOpening}
+          className={`"collapse__arrow ${isOpen ? "arrow_down" : "arrow_up"}`}
           src={isOpen ? arrow_down : arrow_up}
           alt={isOpen ? "fermer" : "ouvrir"}
         />
