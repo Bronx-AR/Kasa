@@ -1,33 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-
-const bannerImages = {
-  "/": {
-    image: require("../assets/home_pic.jpg"),
-    text: "Chez vous, partout et ailleurs",
-  },
-  "/a-propos": {
-    image: require("../assets/about_pic.jpg"),
-    text: "",
-  },
-};
-
-export default function Banner({ location }) {
-  const currentPath = location.pathname;
-  const { image, text } = bannerImages[currentPath];
-
+function Banner({ src, alt, text }) {
   return (
-    <section
-      className={`banner ${currentPath === "/" ? "" : "heightAboutBanner"}`}
-    >
-      <img src={image} alt="Bannière" />
-      {currentPath === "/" && <h1>{text}</h1>}
-    </section>
+    <div className="banner">
+      <img className="banner__img" src={src} alt={alt} />
+      <h1 className="banner__txt">{text}</h1>
+    </div>
   );
 }
 
-Banner.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
-};
+export default Banner;
