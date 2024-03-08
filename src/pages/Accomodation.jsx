@@ -40,43 +40,45 @@ export default function Accommodation() {
     ));
 
     return (
-      <section className="accommodationContent">
-        <Slideshow imagesList={pictures} />
+      <main>
+        <section className="accommodationContent">
+          <Slideshow imagesList={pictures} />
 
-        <div className="titleLocationHostStars">
-          <div className="titleLocation">
-            <div>
-              <h1>{title}</h1>
-              <p>{location}</p>
-            </div>
-            <ul>
-              {tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="hostStars">
-            <div className="host">
-              <p>{host.name}</p>
-              <img src={host.picture} alt={host.name} />
-            </div>
-            <div>{stars}</div>
-          </div>
-        </div>
-        <div className="accommodationCollapse">
-          <Collapse title="Description" content={description} />
-          <Collapse
-            title="Équipements"
-            content={
+          <div className="titleLocationHostStars">
+            <div className="titleLocation">
+              <div>
+                <h1>{title}</h1>
+                <p className="place">{location}</p>
+              </div>
               <ul>
-                {equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
+                {tags.map((tag, index) => (
+                  <li key={index}>{tag}</li>
                 ))}
               </ul>
-            }
-          />
-        </div>
-      </section>
+            </div>
+            <div className="hostStars">
+              <div className="host">
+                <p>{host.name}</p>
+                <img src={host.picture} alt={host.name} />
+              </div>
+              <div>{stars}</div>
+            </div>
+          </div>
+          <div className="accommodationCollapse">
+            <Collapse title="Description" content={description} />
+            <Collapse
+              title="Équipements"
+              content={
+                <ul>
+                  {equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                  ))}
+                </ul>
+              }
+            />
+          </div>
+        </section>
+      </main>
     );
   }
 }

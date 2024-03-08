@@ -8,13 +8,13 @@ export default function Home() {
   const location = useLocation();
 
   return (
-    <div>
+    <main>
       <Banner location={location} />
       <section className="cardsContainer">
         {logements.map((location, index) => (
           <Card location={location} key={index} />
         ))}
       </section>
-    </div>
+    </main>
   );
 }
