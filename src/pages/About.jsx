@@ -1,14 +1,12 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import img from "../assets/about_pic.jpg";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 
 export default function About() {
-  const location = useLocation();
-
   return (
     <main>
-      <Banner location={location} />
+      <Banner image={img} />
       <div className="aboutCollapse">
         <Collapse
           title="Fiabilité"
