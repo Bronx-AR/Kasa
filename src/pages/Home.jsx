@@ -2,11 +2,12 @@ import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import logements from "../data/logements.json";
+import img from "../assets/home_pic.jpg";
 
 export default function Home() {
   return (
     <main>
-      <Banner />
+      <Banner image={img} text="Chez vous, partout et ailleurs" />
       <section className="cardsContainer">
         {logements.map((location, index) => (
           <Card location={location} key={index} />
