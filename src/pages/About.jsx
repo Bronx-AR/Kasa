@@ -6,7 +6,7 @@ import Collapse from "../components/Collapse";
 export default function About() {
   return (
     <main>
-      <Banner image={img} />
+      <Banner image={img} alt="Image d'About" />
       <div className="aboutCollapse">
         <Collapse
           title="Fiabilité"

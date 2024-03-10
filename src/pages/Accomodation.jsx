@@ -38,6 +38,13 @@ export default function Accommodation() {
         alt={index < ratingNumber ? "star" : "empty-star"}
       />
     ));
+    const equipement = (
+      <ul>
+        {equipments.map((equipment, index) => (
+          <li key={index}>{equipment}</li>
+        ))}
+      </ul>
+    );
 
     return (
       <main>
@@ -66,16 +73,7 @@ export default function Accommodation() {
           </div>
           <div className="accommodationCollapse">
             <Collapse title="Description" content={description} />
-            <Collapse
-              title="Équipements"
-              content={
-                <ul>
-                  {equipments.map((equipment, index) => (
-                    <li key={index}>{equipment}</li>
-                  ))}
-                </ul>
-              }
-            />
+            <Collapse title="Équipements" content={equipement} />
           </div>
         </section>
       </main>
