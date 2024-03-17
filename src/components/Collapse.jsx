@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import arrow_up from "../assets/arrow_up.png";
-import arrow_down from "../assets/arrow_down.png";
+import arrow_down from "../assets/arrow_up.png";
 
 export default function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
